@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube App</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            background: linear-gradient(to bottom, #990000, #cc0000);
+            overflow: hidden;
+        }
+
+        a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+            flex: 1;
+            font-size: 4vw; /* Dynamically scale font size with screen size */
+            text-align: center;
+            text-decoration: none;
+            color: #fff;
+            background: linear-gradient(to bottom, #cc0000, #990000);
+            border-bottom: 2px solid #fff;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        a:hover {
+            background: linear-gradient(to bottom, #660000, #990000);
+            color: #fff;
+        }
+
+        @media (max-width: 600px) {
+            a {
+                font-size: 8vw; /* Larger font size for smaller screens */
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="https://music.youtube.com/" onclick="openLink('https://music.youtube.com/')">YouTube Music</a>
+    <a href="https://www.youtube.com/" onclick="openLink('https://www.youtube.com/')">YouTube</a>
+
+    <script>
+        function openLink(url) {
+            window.location.href = url;
+        }
+    </script>
+</body>
+</html>
