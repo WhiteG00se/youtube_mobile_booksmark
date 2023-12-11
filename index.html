@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,7 +23,7 @@
             margin: 0;
             padding: 0;
             flex: 1;
-            font-size: 4vw; /* Dynamically scale font size with screen size */
+            font-size: 4vw;
             text-align: center;
             text-decoration: none;
             color: #fff;
@@ -31,26 +32,22 @@
             transition: background 0.3s, color 0.3s;
         }
 
-        a:hover {
-            background: linear-gradient(to bottom, #660000, #990000);
-            color: #fff;
-        }
-
         @media (max-width: 600px) {
             a {
-                font-size: 8vw; /* Larger font size for smaller screens */
+                font-size: 8vw;
             }
         }
     </style>
 </head>
+
 <body>
     <a href="https://music.youtube.com/" onclick="openLink('https://music.youtube.com/')">YouTube Music</a>
     <a href="https://www.youtube.com/" onclick="openLink('https://www.youtube.com/')">YouTube</a>
-
     <script>
         function openLink(url) {
             window.location.href = url;
         }
     </script>
 </body>
+
 </html>
