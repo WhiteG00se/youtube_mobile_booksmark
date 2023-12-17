@@ -6,14 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>YouTube App</title>
     <style>
+        html,
         body {
+            height: 100%;
             margin: 0;
             padding: 0;
-            height: 100vh;
+        }
+
+        body {
             display: flex;
             flex-direction: column;
             background: linear-gradient(to bottom, #990000, #cc0000);
             overflow: hidden;
+            padding-top: env(safe-area-inset-top);
+            /* Adjust for iOS safe area */
+            padding-bottom: env(safe-area-inset-bottom);
+            /* Adjust for iOS safe area */
         }
 
         a {
@@ -30,6 +38,11 @@
             background: linear-gradient(to bottom, #cc0000, #990000);
             border-bottom: 2px solid #fff;
             transition: background 0.3s, color 0.3s;
+        }
+
+        a {
+            border-bottom: 20px solid hsl(251, 100%, 30%);
+            /* Remove the box shadow for the last container */
         }
 
         @media (max-width: 600px) {
